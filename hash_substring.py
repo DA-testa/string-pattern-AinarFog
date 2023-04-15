@@ -15,7 +15,8 @@ def rInput():
     
 def DaSplits(tupperware):
   protons=[]
-  q0=len(tupperware[0])
+  qu=tupperware[0]
+  q0=len(qu)
   q1=hash(tupperware[0])
   q2=tupperware[1]
   for i in range(len(tupperware[1])-q0+1):
