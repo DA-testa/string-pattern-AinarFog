@@ -18,7 +18,7 @@ def DaSplits(tupperware):
   q0=len(tupperware[0])
   q1=hash(tupperware[0])
   q2=tupperware[1]
-  for i in range(len(tupperware[1])-q0):
+  for i in range(len(tupperware[1])-q0+1):
     q3=hash(q2[i:(i+q0)])
     if (q1==q3):
       protons.append(i)
@@ -27,7 +27,7 @@ def DaSplits(tupperware):
 def Dave(richard):
   ron=""
   for i in range(len(richard)):
-    ron=ron+str(richard[i])
+    ron+=str(richard[i])
     if(i<len(richard)):
       ron=ron+" "
   print(ron)
