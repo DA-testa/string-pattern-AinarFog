@@ -2,11 +2,12 @@
 
 def rInput():
   q1=str(input())
-  if (q1.upper()=="I"):
+  if "I" in q1:
     q2=str(input())
     q3=str(input())
     return q2 ,q3
-  elif (q1.upper()=="R"):
+    
+  elif "R" in q1:
     q0=str(input())
     e="test/"+q0
     with open(e) as t:
@@ -14,10 +15,10 @@ def rInput():
       q2=q2.replace("\n","")
       q3=t.readline()
     return q2, q3
+    
 def DaSplits(tupperware):
   protons=[]
-  qu=tupperware[0]
-  q0=len(qu)
+  q0=len(tupperware[0])
   q1=hash(tupperware[0])
   q2=tupperware[1]
   for i in range(len(tupperware[1])-q0):
@@ -25,6 +26,7 @@ def DaSplits(tupperware):
     if (q1==q3):
       protons.append(i)
   return protons
+  
 def Dave(richard):
   ron=""
   for i in range(len(richard)):
@@ -32,5 +34,6 @@ def Dave(richard):
     if(i<len(richard)):
       ron=ron+" "
   print(ron)
+  
 if (__name__ == '__main__'):
   Dave(DaSplits(rInput()))
