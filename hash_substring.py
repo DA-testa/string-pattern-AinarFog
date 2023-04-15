@@ -1,19 +1,16 @@
 # python3
-
 def rInput():
   q1=str(input())
   if "I" in q1:
-    q2=str(input())
-    q3=str(input())
+    q2=str(input()).rstrip()
+    q3=str(input()).rstrip()
     return q2 ,q3
     
   elif "R" in q1:
-    q0=str(input())
-    e="test/"+q0
+    e="tests/06" 
     with open(e) as t:
-      q2=t.readline()
-      q2=q2.replace("\n","")
-      q3=t.readline()
+      q2=t.readline().rstrip()
+      q3=t.readline().rstrip()
     return q2, q3
     
 def DaSplits(tupperware):
